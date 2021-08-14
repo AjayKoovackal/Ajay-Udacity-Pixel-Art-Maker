@@ -9,7 +9,7 @@ function makeGrid()
     const inputHeight = document.getElementById("inputHeight").value;
     const inputWidth= document.getElementById("inputWidth").value;
     // Get Selected color input
-    const colorPicker = document.getElementById("colorPicker").value;
+    const colorPicker = document.getElementById("colorPicker");
     // Get canvas for grid table 
     let pixelCanvas = document.getElementById("pixelCanvas");
    
@@ -32,8 +32,8 @@ function makeGrid()
     
     // When user clicks a cell square, change the color of it
     pixelCanvas.onclick = function(e) {
-        e.target.style.backgroundColor = colorPicker;
-    };
+        e.target.style.backgroundColor = colorPicker.value;
+    }
 }
 
 // When size is submitted by the user, call makeGrid()
